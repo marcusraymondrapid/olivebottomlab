@@ -1,0 +1,12 @@
+{
+  "name": "queue-consumer-310876",
+  "version": "1.0.0",
+  "description": "A queue consumer utility",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["queue-consumer", "utility"],
+  "license": "MIT"
+}
